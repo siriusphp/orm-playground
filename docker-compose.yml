@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  php:
+    image: thecodingmachine/php:7.4-v3-apache
+    container_name: siriusorm_play_php
+    environment:
+      PHP_EXTENSION_XDEBUG: 1
+    volumes:
+      - ./:/var/www/html:delegated
+
+  mysql:
+    image: mysql:latest
+    container_name: siriusorm_play_mysql
+    restart: 'always'
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: "ormplayground"
+      MYSQL_ROOT_PASSWORD: "sirius"
+      MYSQL_ROOT_HOST: "%"

@@ -1,0 +1,23 @@
+{
+    "name": "siriusphp/orm-playground",
+    "description": "Project for demonstrating the Sirius\\Orm capabilities",
+    "type": "project",
+    "require": {
+        "siriusphp/orm": "^2.0",
+        "league/event": "^3.0",
+        "doctrine/dbal": "^2.10",
+        "league/container": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adrian Miu",
+            "email": "adrian@adrianmiu.ro"
+        }
+    ]
+}
